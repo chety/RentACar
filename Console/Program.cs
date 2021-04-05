@@ -74,17 +74,22 @@ namespace ConsoleUI
             //brands.ForEach(brand => brandManager.Add(brand));
 
             //CAR VALIDATION TEST
-            var car = new Car
+            //var car = new Car
+            //{
+            //    BrandId = 3,
+            //    ColorId = 2,
+            //    DailyPrice = 0,
+            //    Name = "abcdfd",
+            //    Description = "Brand new shitty car",
+            //    ModelYear = 1990
+            //};
+            //var result = carManager.Add(car);
+            //Console.WriteLine(result.Message);
+
+            foreach (var carDetail in carManager.GetAllCarDetails())
             {
-                BrandId = 3,
-                ColorId = 2,
-                DailyPrice = 0,
-                Name = "abcdfd",
-                Description = "Brand new shitty car",
-                ModelYear = 1990
-            };
-            var result = carManager.Add(car);
-            Console.WriteLine(result.Message);
+                Console.WriteLine(carDetail);
+            }
         }
     }
 }

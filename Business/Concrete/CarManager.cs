@@ -5,6 +5,7 @@ using Core.CrossCuttingConcerns;
 using Core.Utilities.Result;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -44,6 +45,11 @@ namespace Business.Concrete
         public IDataResult<IEnumerable<Car>> GetAll()
         {
             return _carDal.GetAll();
+        }
+
+        public IEnumerable<CarDetail> GetAllCarDetails()
+        {
+            return _carDal.GetCarDetails();
         }
 
         public IDataResult<Car> GetById(int id)

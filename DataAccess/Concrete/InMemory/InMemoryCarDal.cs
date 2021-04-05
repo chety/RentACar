@@ -1,6 +1,7 @@
 ﻿using Core.Utilities.Result;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -76,6 +77,11 @@ namespace DataAccess.Concrete.InMemory
             {
                 return new ErrorDataResult<Car>($"There is no car with id {id}");
             }
+        }
+
+        public List<CarDetail> GetCarDetails()
+        {
+            throw new NotImplementedException();
         }
 
         public IResult Update(Car car)

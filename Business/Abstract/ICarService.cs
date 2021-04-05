@@ -1,8 +1,8 @@
 ﻿using Core.Utilities.Result;
 using Entities.Concrete;
+using Entities.DTO;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 
 namespace Business.Abstract
@@ -11,6 +11,7 @@ namespace Business.Abstract
     {
         IDataResult<Car> GetById(int id);
         IDataResult<IEnumerable<Car>> GetAll();
+        IEnumerable<CarDetail> GetAllCarDetails();
         IDataResult<Car> Get(Expression<Func<Car, bool>> filter);
         IDataResult<IEnumerable<Car>> GetCarsByModelYearAndDailyPrice(int modelYear, decimal dailyPrice);
         IDataResult<IEnumerable<Car>> GetCarsByBrandId(int brandId);
